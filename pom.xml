@@ -15,6 +15,8 @@
             <serenity.maven.version>2.5.7</serenity.maven.version>
             <serenity.cucumber.version>2.5.7</serenity.cucumber.version>
             <Parallel.tests>4</Parallel.tests>
+            <sonar.organization>manoj2507</sonar.organization>
+            <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         </properties>
 
         <dependencies>
