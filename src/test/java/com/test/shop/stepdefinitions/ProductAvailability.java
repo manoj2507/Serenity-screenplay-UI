@@ -1,5 +1,6 @@
 package com.test.shop.stepdefinitions;
 
+import com.test.shop.tasks.NavigateTo;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import net.serenitybdd.screenplay.actors.OnStage;
@@ -15,7 +16,7 @@ public class ProductAvailability {
 
     @Given("that {string} wants to check the availability of {string} Jeans")
     public void thatStringwantstochecktheavailabilityofstringjeans(String actor,String brand){
-        theActorCalled(actor).attemptsTo();
+        theActorCalled(actor).attemptsTo(NavigateTo.Myntra());
 
     }
 
