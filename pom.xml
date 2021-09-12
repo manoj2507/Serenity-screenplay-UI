@@ -72,17 +72,15 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>3.0.0-M5</version>
                     <configuration>
-                        <SystemPropertyVariables>
+                        <systemPropertyVariables>
                             <webdriver.chrome.driver>${chrome.driver.path}</webdriver.chrome.driver>
-                            <username>${username}</username>
-                            <password>${password}</password>
-                        </SystemPropertyVariables>
+                        </systemPropertyVariables>
                         <includes>
                             <include>**/CucumberTestSuite.java</include>
                         </includes>
                         <threadCount></threadCount>
                         <forkCount></forkCount>
-                        <Parallel></Parallel>
+                        <parallel>methods</parallel>
                         <testFailureIgnore>true</testFailureIgnore>
                         <skip>true</skip>
                     </configuration>
@@ -147,6 +145,12 @@
     <profiles>
         <profile>
             <id>test</id>
+            <properties>
+                <serenity.environment>sit</serenity.environment>
+            </properties>
+        </profile>
+        <profile>
+            <id>default</id>
             <properties>
                 <serenity.environment>sit</serenity.environment>
             </properties>
