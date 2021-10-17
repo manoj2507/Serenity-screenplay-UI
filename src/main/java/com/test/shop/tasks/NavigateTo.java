@@ -10,7 +10,7 @@ public class NavigateTo  {
     private NavigateTo(){
 
     }
-    public static Performable Myntra(){
+    public static Performable myntra(){
         return Task.where("{0} opens Myntra in browser",
                 Open.browserOn().thePageNamed("baseurl"));
     }

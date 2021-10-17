@@ -17,13 +17,13 @@ public class ProductAvailability {
     }
 
     @Given("that {string} wants to check the availability of Jeans brands")
-    public void thatStringwantstochecktheavailabilityofstringjeans(String actor){
-        theActorCalled(actor).attemptsTo(NavigateTo.Myntra());
+    public void thatStringWantsToCheckTheAvailabilityOfStringJeans(String actor){
+        theActorCalled(actor).attemptsTo(NavigateTo.myntra());
 
     }
 
-    @When("When he tries to search the {string} brand in Myntra")
-    public void whenhetriestosearchthestringbranchinmyntra(String brand){
+    @When("he tries to search the {string} brand in Myntra")
+    public void heTriesToSearchTheStringBrandInMyntra(String brand){
         theActorInTheSpotlight().attemptsTo();
     }
 
